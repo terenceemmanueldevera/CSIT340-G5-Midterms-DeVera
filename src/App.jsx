@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
+import Stats from "./components/Stats";
 
 function App() {
   const [stars, setStars] = useState(0);
@@ -35,20 +36,12 @@ function App() {
         onReport={handleReport} 
         onReset={handleReset} />
 
-      <div className="flex justify-center gap-6 pb-8">
-        <div className="w-48 rounded-xl bg-[#F3E6D5] py-4 text-center">
-          <p className="text-4xl font-bold">{stars}</p>
-          <p className="mt-1 text-lg text-[#000000]">Stars</p>
-        </div>
-        <div className="w-48 rounded-xl bg-[#F3E6D5] py-4 text-center">
-          <p className="text-4xl font-bold">{downloads}</p>
-          <p className="mt-1 text-lg text-[#000000]">Downloads</p>
-        </div>
-        <div className="w-48 rounded-xl bg-[#F3E6D5] py-4 text-center">
-          <p className="text-4xl font-bold">{issues}</p>
-          <p className="mt-1 text-lg text-[#000000]">Issues reported</p>
-        </div>
-      </div>
+        <Stats
+        stars={stars}
+        downloads={downloads}
+        issues={issues}
+      />
+
 
       <main className="grid grid-cols-3 gap-8 px-20">
         <div className="rounded-xl bg-[#F3E6D5] p-6">
