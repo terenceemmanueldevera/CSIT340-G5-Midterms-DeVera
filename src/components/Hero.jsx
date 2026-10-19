@@ -1,4 +1,4 @@
-function Hero() {
+function Hero({ onStar, onDownload, onReport, onReset }) {
   return (
     <>
       <header className="px-20 pt-8 text-center">
@@ -10,25 +10,25 @@ function Hero() {
       <div className="flex justify-center gap-4 py-6">
         <button
           className="cursor-pointer rounded-lg bg-[#800020] px-8 py-3 text-xl font-bold text-[#FFF9F2]"
-          onClick={handleStar}
+          onClick={onStar}
         >
           Star
         </button>
         <button
           className="cursor-pointer rounded-lg bg-[#D45060] px-8 py-3 text-xl font-bold text-[#FFF9F2]"
-          onClick={handleDownload}
+          onClick={onDownload}
         >
           Download
         </button>
         <button
           className="cursor-pointer rounded-lg bg-[#000000] px-8 py-3 text-xl font-bold text-[#FFF9F2]"
-          onClick={handleReport}
+          onClick={onReport}
         >
           Report issue
         </button>
         <button
           className="cursor-pointer rounded-lg border border-[#800020] px-8 py-3 text-xl font-bold"
-          onClick={handleReset}
+          onClick={onReset}
         >
           Reset
         </button>
