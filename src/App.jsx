@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
 
 function App() {
   const [stars, setStars] = useState(0);
@@ -28,38 +29,11 @@ function App() {
     <div className="flex min-h-screen flex-col bg-[#FFF9F2] text-[#800020]">
       <Navbar />
 
-      <header className="px-20 pt-8 text-center">
-        <h2 className="text-7xl font-bold">Build pages faster.</h2>
-        <p className="mt-5 text-2xl text-[#000000]">An open-source component kit for React.</p>
-        <p className="mt-2 text-xl text-[#000000]">Made by TERENCE EMMANUEL DE VERA</p>
-      </header>
-
-      <div className="flex justify-center gap-4 py-6">
-        <button
-          className="cursor-pointer rounded-lg bg-[#800020] px-8 py-3 text-xl font-bold text-[#FFF9F2]"
-          onClick={handleStar}
-        >
-          Star
-        </button>
-        <button
-          className="cursor-pointer rounded-lg bg-[#D45060] px-8 py-3 text-xl font-bold text-[#FFF9F2]"
-          onClick={handleDownload}
-        >
-          Download
-        </button>
-        <button
-          className="cursor-pointer rounded-lg bg-[#000000] px-8 py-3 text-xl font-bold text-[#FFF9F2]"
-          onClick={handleReport}
-        >
-          Report issue
-        </button>
-        <button
-          className="cursor-pointer rounded-lg border border-[#800020] px-8 py-3 text-xl font-bold"
-          onClick={handleReset}
-        >
-          Reset
-        </button>
-      </div>
+      <Hero 
+        onStar={handleStar} 
+        onDownload={handleDownload}
+        onReport={handleReport} 
+        onReset={handleReset} />
 
       <div className="flex justify-center gap-6 pb-8">
         <div className="w-48 rounded-xl bg-[#F3E6D5] py-4 text-center">
