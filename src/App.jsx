@@ -28,6 +28,10 @@ function App() {
     setIssues(5);
   }
 
+  function handleContribute() {
+    setIssues(issues - 1);
+  }
+
   return (
     <div className="flex min-h-screen flex-col bg-[#FFF9F2] text-[#800020]">
       <Navbar />
@@ -36,7 +40,8 @@ function App() {
         onStar={handleStar} 
         onDownload={handleDownload}
         onReport={handleReport} 
-        onReset={handleReset} />
+        onReset={handleReset}
+        onContribute={handleContribute} />
 
         <Stats
         stars={stars}
@@ -54,3 +59,6 @@ function App() {
 }
 
 export default App;
+
+
+  

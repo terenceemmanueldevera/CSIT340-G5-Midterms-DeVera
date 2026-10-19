@@ -1,7 +1,12 @@
 import FeatureCard from "./FeatureCard";
 
-function Intro() {
+function Intro({author}) {
   return (
+<   section>
+      <p className="mb-6 text-center text-lg">
+        Created by {author}
+      </p>
+
     <main className="grid grid-cols-1 gap-8 px-6 pb-8 md:grid-cols-3 md:px-20">
       <FeatureCard
         badge="Free"
@@ -21,6 +26,7 @@ function Intro() {
         description="Every component takes a few plain props."
       />
     </main>
+    </section>
   );
 }
 
